@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "tiles/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "tiles/wsgi.py"
+    }
+  ],
+  "env": {
+    "DJANGO_ALLOWED_HOSTS": ".vercel.app",
+    "DJANGO_DEBUG": "False"
+  }
+}
